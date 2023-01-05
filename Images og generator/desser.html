@@ -1,0 +1,96 @@
+<html>
+
+<head>
+
+<style>
+body {
+
+    background-color:rgb(155, 128, 128) ;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover  ;
+    padding: 15px 32px;
+    align-items: center;
+    
+}
+   /*button */
+button{
+   align-items: center;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    border-radius: 40% ;
+    color: black;
+    cursor: pointer;
+    padding: 14px 40px;
+   
+}
+
+
+.Back{
+    position: absolute;bottom:50px;right: 1235px;
+    font-size: 20px; 
+    margin: 4px 2px;
+    padding: 14px 40px;
+    color: aqua;
+    cursor: pointer;
+    background-color: gray;
+    
+
+}
+</style>
+
+<title>Dessert gen</title>
+
+<script>
+
+    window.onload= function ()
+        {
+        
+        var dessert = new Image();
+        var dessertnum=Math.floor(Math.random()*3)+1; //Mango = mango
+        var dessertname="dessert" + dessertnum + ".png";
+        dessert.src=dessertname; 
+
+    dessert.onload=function()
+{
+    dessertprint();
+}
+
+    function dessertprint()
+        {
+        var canvas=document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        canvas.width=400;
+        canvas.height=400;
+
+        ctx.drawImage(dessert,((400-dessert.width)/2),0);
+
+    }
+
+}
+</script>
+
+
+</head>
+
+
+
+<body>
+<h2 style="text-align:center">Dessert gen</h2>
+    
+<div align="center">
+    
+<canvas id ="canvas" style="border:5px solid #000000;"></canvas>
+<br><br>
+<button class= button, onClick="window.location.reload();">Randomize!!!</button>
+<input type="button" value="Back" class="Back" onclick="window.open('C:/Users/antngu04/OneDrive%20-%20Nordre%20Follo%20kommune/Programering/Prosjekter/Images%20og%20generator/food.html')"> 
+
+
+
+</div>
+
+</body>
+
+</html>

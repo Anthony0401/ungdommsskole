@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+
+button {
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    border-radius: 40% ;
+    color: black;
+    cursor: pointer;
+    padding: 14px 40px;
+
+</style>
+
+<title>Husbando gen</title>
+
+<script>
+
+    window.onload= function ()
+
+        {
+        var Husbando = new Image();
+        var Husbandounum=Math.floor(Math.random()*3)+1; //num == the waifu 2 forskjellige
+        var Husbandoname="Husbando" + Husbandonum + ".png";
+        Husbando.src=Husbandoname; 
+
+
+Husbando.onload=function()
+{
+    Husbandoprint();
+
+
+}
+
+
+    function Husbandoprint()
+        {
+        var canvas=document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        canvas.width=400;
+        canvas.height=550;
+
+        ctx.drawImage(Husbando,((400-Husbando.width)/2),0);
+
+    }
+
+}
+</script>
+
+</head>
+
+
+
+<body>
+<h2 style="text-align:center">Waifu gen</h2>
+    
+<div align="center">
+<canvas id ="canvas" style="border:5px solid #000000;"></canvas>
+<br><br>
+<button class="button" onClick="window.location.reload();">Randomize!!!</button>
+
+
+
+</div>
+
+</body>
+
+</html>
